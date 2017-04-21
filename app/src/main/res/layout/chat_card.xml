@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lead_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="5dp"
+    >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_layout"
+                    android:paddingBottom="25dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GLOBAL ELECTRONICS"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:id="@+id/name"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="25dp"/>
+
+                    <com.example.sagar.quickdeal.CircularTextView
+                        android:id="@+id/circularTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="1dp"
+                        android:text="1"
+                        android:textColor="#fff"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="60dp"
+
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fine sir.Will deliver sample on your registerd..."
+                        android:textSize="12dp"
+                        android:id="@+id/chat"
+                        android:layout_below="@+id/name"
+                        android:paddingTop="9dp"
+                        android:paddingLeft="25dp"/>
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:id="@+id/days_layout"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 min ago"
+                    android:textSize="10dp"
+                    android:id="@+id/days"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/image"
+                    android:src="@drawable/chandshake"
+                    android:layout_below="@+id/days"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+

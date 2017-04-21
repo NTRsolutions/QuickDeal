@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/utoolbar"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="10dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:id="@+id/uname"
+                    android:textAllCaps="false"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Posted 30 min ago"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right|center"
+                    android:padding="5dp"
+                    android:textSize="10dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/days"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:paddingTop="10dp"
+        android:elevation="10dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="32dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Need 1000pcs of electronic fans"
+            android:textColor="#fff"
+            android:textSize="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="32dp"
+            android:id="@+id/require"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:padding="7dp"
+                android:id="@+id/description">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginBottom="6dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Need Unique and royal fan from Usha. Made out of stainless with white glossy finishing.Contact with quote."
+                    android:textSize="17dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/description"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Attached File"
+                    android:textColor="@color/colorPrimary"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:id="@+id/attached"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#e3e3e3"
+                    android:layout_below="@+id/attached">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/imaged"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:id="@+id/imaged"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Screenshot999.jpg"
+                        android:textColor="#000"
+                        android:layout_toRightOf="@+id/imaged"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/scs"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="288kb"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="10dp"
+                        android:layout_toRightOf="@+id/scs"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/download"
+                        android:layout_marginLeft="65dp"
+                        android:scaleX="0.5"
+                        android:scaleY="0.5"
+                        android:id="@+id/download"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="10dp"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_alignParentBottom="true"
+
+                >
+                <Button
+                    android:id="@+id/notinterested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not interested"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/round_corner2"
+                    android:textColor="#ffb300"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp"
+
+                    />
+                <Button
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Message now"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_corner"
+                    android:textColor="#fff"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textAllCaps="false"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
