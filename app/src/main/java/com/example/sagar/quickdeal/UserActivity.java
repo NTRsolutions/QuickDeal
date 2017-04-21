@@ -36,13 +36,16 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile);
+
         prefManager=new PrefManager(getApplicationContext());
+
         message=(Button)findViewById(R.id.message);
         toolbar=(Toolbar)findViewById(R.id.utoolbar);
         download=(ImageView)findViewById(R.id.download);
         uname=(TextView)findViewById(R.id.uname);
         days=(TextView)findViewById(R.id.days);
         requirements=(TextView)findViewById(R.id.require);
+
         str=toTitleCase(prefManager.getCName());
         uname.setText(str);
         days.setText(prefManager.getDays());
