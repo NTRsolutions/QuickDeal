@@ -60,6 +60,8 @@ public class ChatActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+
         getChartCards();
 
 
@@ -68,6 +70,8 @@ public class ChatActivity extends AppCompatActivity {
     private void getChartCards() {
 
         chartCardModelList=new ArrayList<>();
+
+        //Filling data here
         chartCardModelList.add(new ChartCardModel("GLOBAL ELECTRONICS","Fine sir.Will deliver sample on your registerd...",1,"2 min ago",image[0]));
         chartCardModelList.add(new ChartCardModel("PATEL ELECTRONICS","Yes sir!We have product available in stock sir...",3,"5 min ago",image[0]));
         chartCardModelList.add(new ChartCardModel("BOMBAY ELECTRONICS","Thank you sir !",0,"10 min ago",image[1]));

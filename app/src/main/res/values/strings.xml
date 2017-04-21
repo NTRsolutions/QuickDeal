@@ -8,4 +8,10 @@
     <string name="attached_file">Attached File</string>
     <string name="not_interested">Not interested</string>
     <string name="message_now">Message now</string>
+    <string name="download">Download</string>
+    <string name="wait">Downloading, Please Wait!</string>
+    <string name="downloading_file">Downloading File</string>
+    <string name="file">File</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="error">Error Occurred</string>
 </resources>

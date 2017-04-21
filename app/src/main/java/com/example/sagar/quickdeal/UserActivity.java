@@ -102,8 +102,8 @@ public class UserActivity extends AppCompatActivity {
             };
 
             mProgressDialog = new ProgressDialog(UserActivity.this);
-            mProgressDialog.setTitle("Download");
-            mProgressDialog.setMessage("Downloading, Please Wait!");
+            mProgressDialog.setTitle(getResources().getString(R.string.download));
+            mProgressDialog.setMessage(getResources().getString(R.string.wait));
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.setMax(100);
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -127,8 +127,8 @@ public class UserActivity extends AppCompatActivity {
             mNotifyManager =
                     (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
             mBuilder = new NotificationCompat.Builder(getApplicationContext());
-            mBuilder.setContentTitle("Downloading File")
-                    .setContentText("File")
+            mBuilder.setContentTitle(getResources().getString(R.string.downloading_file))
+                    .setContentText(getResources().getString(R.string.file))
                     .setProgress(0, 100, false)
                     .setOngoing(true)
                     .setSmallIcon(R.mipmap.ic_launcher)
@@ -159,9 +159,9 @@ public class UserActivity extends AppCompatActivity {
             super.onPostExecute(s);
             String title;
             if (s.equals("Success")) {
-                title = "Downloaded";
+                title = getResources().getString(R.string.downloaded);
             } else {
-                title = "Error Occurred";
+                title = getResources().getString(R.string.error);
             }
             mBuilder.setContentTitle(title)
                     .setContentInfo("")
