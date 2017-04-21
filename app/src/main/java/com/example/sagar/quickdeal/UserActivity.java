@@ -48,7 +48,7 @@ public class UserActivity extends AppCompatActivity {
         days.setText(prefManager.getDays());
         requirements.setText(prefManager.getRequirements());
 
-
+        //customizing toolbar navigation icon
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.back);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
@@ -60,6 +60,7 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+
         message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,9 +69,11 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+
         download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //calling Async Task
                 new Download().execute("");
             }
         });
@@ -86,6 +89,8 @@ public class UserActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+
+            //To notify phone for downloading notification
             cdt = new CountDownTimer(100 * 60 * 1000, 500) {
                 public void onTick(long millisUntilFinished) {
                     mNotifyManager.notify(id, mBuilder.build());
@@ -102,6 +107,7 @@ public class UserActivity extends AppCompatActivity {
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.setMax(100);
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+
             // Show progress dialog
             mProgressDialog.show();
         }
@@ -136,6 +142,9 @@ public class UserActivity extends AppCompatActivity {
             // Create connection here
             publishProgress(20);
 
+
+            //Random loop to show loading
+            //Any logic to download can be implemented here
             while (total<=10000){
                 total++;
                 publishProgress((int)total * 100 / 10000);
@@ -179,7 +188,6 @@ public class UserActivity extends AppCompatActivity {
                 }
                 return output.trim();
     }
-
 
 
 

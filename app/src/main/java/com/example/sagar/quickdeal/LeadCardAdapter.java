@@ -61,6 +61,7 @@ public class LeadCardAdapter extends RecyclerView.Adapter<LeadCardAdapter.MyHold
         TextView require_card = holder.requirements;
         final TextView days_card=holder.days;
 
+        //setting data in the card elements
         name_card.setText(dataSet.get(position).name);
         require_card.setText(dataSet.get(position).requirements);
         days_card.setText(dataSet.get(position).days_update);
@@ -82,6 +83,9 @@ public class LeadCardAdapter extends RecyclerView.Adapter<LeadCardAdapter.MyHold
 
 
     }
+
+    //Declaring interface for making card clickable
+
     public interface VenueAdapterClickCallbacks {
         void onCardClick( String n,String r,String d);
 

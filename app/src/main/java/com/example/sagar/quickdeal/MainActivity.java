@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.leads);
         toolbar.setTitleTextColor(Color.WHITE);
+
+        //customizing toolbar navigation icon
         Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.back);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //filling recycle view adapter
         getLeadCards();
 
     }
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
     public void getLeadCards(){
 
         leadCardModelList=new ArrayList<>();
+
+        //Adding data to the cards
         leadCardModelList.add(new LeadCardModel("RAKESH PATEL","Need 1000pcs of Electric fans","Posted 30 min ago"));
         leadCardModelList.add(new LeadCardModel("JOSEPH SMITH","500 LED Television for New Showroom","Posted 45 min ago"));
         leadCardModelList.add(new LeadCardModel("SHAILEE SHAH","Need 1000pcs of Electric fans","Posted 1 hr ago"));
@@ -60,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCardClick(String n, String r, String d) {
 
+                //Storing data for future use in application
                 prefManager.setCName(n);
                 prefManager.setRequirements(r);
                 prefManager.setDays(d);
