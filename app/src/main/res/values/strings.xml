@@ -3,4 +3,9 @@
 
     <string name="leads">Leads</string>
     <string name="chats">Chats</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="attached_file">Attached File</string>
+    <string name="not_interested">Not interested</string>
+    <string name="message_now">Message now</string>
 </resources>

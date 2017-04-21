@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -15,9 +14,8 @@
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         app:contentInsetStartWithNavigation="0dp"
-        android:elevation="10dp"
+        android:elevation="10dp">
 
-        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +29,7 @@
                 android:layout_marginBottom="25dp">
 
                 <TextView
+                    android:id="@+id/uname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -38,21 +37,19 @@
                     android:layout_alignParentLeft="true"
                     android:textStyle="bold"
                     android:textSize="20dp"
-                    android:id="@+id/uname"
-                    android:textAllCaps="false"
+                    android:textAllCaps="false" />
 
-                    />
                 <TextView
+                    android:id="@+id/days"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Posted 30 min ago"
                     android:textColor="#fff"
                     android:layout_alignParentRight="true"
                     android:gravity="right|center"
                     android:padding="5dp"
                     android:textSize="10dp"
                     android:layout_marginRight="10dp"
-                    android:id="@+id/days"/>
+                    />
 
             </RelativeLayout>
 
@@ -72,14 +69,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="@string/title"
             android:textColor="#fff"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="32dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Need 1000pcs of electronic fans"
             android:textColor="#fff"
             android:textSize="30dp"
             android:layout_marginBottom="15dp"
@@ -113,7 +109,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Description"
+                    android:text="@string/description"
                     android:textColor="@color/colorPrimary"
                     android:layout_marginBottom="6dp"
                     android:paddingLeft="5dp"
@@ -140,7 +136,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Attached File"
+                    android:text="@string/attached_file"
                     android:textColor="@color/colorPrimary"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
@@ -204,7 +200,7 @@
                     android:id="@+id/notinterested"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Not interested"
+                    android:text="@string/not_interested"
                     android:layout_alignParentLeft="true"
                     android:background="@drawable/round_corner2"
                     android:textColor="#ffb300"
@@ -213,15 +209,16 @@
                     android:textAllCaps="false"
                     android:textSize="15dp"
                     android:layout_marginBottom="5dp"
+                    style="?android:attr/borderlessButtonStyle"
 
                     />
                 <Button
                     android:id="@+id/message"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Message now"
+                    android:text="@string/message_now"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/round_corner"
+                    android:background="@drawable/round_corner1"
                     android:textColor="#fff"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -229,6 +226,7 @@
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginBottom="5dp"
+                    style="?android:attr/borderlessButtonStyle"
                     />
 
             </RelativeLayout>
