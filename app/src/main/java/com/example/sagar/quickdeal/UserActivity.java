@@ -17,6 +17,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -55,9 +56,12 @@ public class UserActivity extends AppCompatActivity {
         days.setText(prefManager.getDays());
         requirements.setText(prefManager.getRequirements());
 
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        int densityDpi = (int)(metrics.density * 160f);
+
         //customizing toolbar navigation icon
         DrawableResizeClass dr=new DrawableResizeClass();
-        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,240,240);
+        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,densityDpi/2,densityDpi/2);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

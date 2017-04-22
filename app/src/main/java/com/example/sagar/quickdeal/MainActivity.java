@@ -10,6 +10,8 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
 
@@ -33,9 +35,12 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.leads);
         toolbar.setTitleTextColor(Color.WHITE);
 
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        int densityDpi = (int)(metrics.density * 160f);
+
         //customizing toolbar navigation icon
         DrawableResizeClass dr=new DrawableResizeClass();
-        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,240,240);
+        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,densityDpi/2,densityDpi/2);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
 
