@@ -40,9 +40,8 @@ public class ChatActivity extends AppCompatActivity {
         toolbar=(Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.chats);
         toolbar.setTitleTextColor(Color.WHITE);
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.back);
-        drawable = new ScaleDrawable(drawable, 0, 20, 20).getDrawable();
-        drawable.setBounds(0,0,20,20);
+        DrawableResizeClass dr=new DrawableResizeClass();
+        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,240,240);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

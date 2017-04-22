@@ -5,6 +5,10 @@ import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -52,7 +56,8 @@ public class UserActivity extends AppCompatActivity {
         requirements.setText(prefManager.getRequirements());
 
         //customizing toolbar navigation icon
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.back);
+        DrawableResizeClass dr=new DrawableResizeClass();
+        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,240,240);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -191,6 +196,7 @@ public class UserActivity extends AppCompatActivity {
                 }
                 return output.trim();
     }
+
 
 
 

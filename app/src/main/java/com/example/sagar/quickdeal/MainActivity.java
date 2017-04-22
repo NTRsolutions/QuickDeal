@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(Color.WHITE);
 
         //customizing toolbar navigation icon
-        Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.back);
+        DrawableResizeClass dr=new DrawableResizeClass();
+        Drawable drawable=dr.resizeImage(getApplicationContext(),R.drawable.back,240,240);
         toolbar.setNavigationIcon(drawable);
         setSupportActionBar(toolbar);
 
