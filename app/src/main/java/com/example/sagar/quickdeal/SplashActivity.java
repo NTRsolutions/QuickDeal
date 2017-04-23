@@ -26,7 +26,6 @@ public class SplashActivity extends AwesomeSplash {
         configSplash.setAnimLogoSplashDuration(1000); //int ms
         configSplash.setAnimLogoSplashTechnique(Techniques.BounceInDown);
 
-
         //Customize Path
         // configSplash.setPathSplash(Constants.DROID_LOGO); //set path String
         configSplash.setOriginalHeight(400); //in relation to your svg (path) resource
